@@ -1,0 +1,206 @@
+:root{
+    --vermelho:#E50914;
+    --preto:#141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*manter o limite definido para os elementos | borda da caixa*/
+}
+
+/*Básicos*/
+
+body{
+    background: var(--preto);
+    font-family: 'Helvetica', Times, sans-serif;
+    color: #fff;
+}
+
+.navbar-color{
+    background: rgb(20, 20, 20) !important;
+    transition: .4s ease-in;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 10px; */
+    padding: 0 4%;
+    height: 70px;
+    background-color: transparent;
+    position: fixed;
+    z-index: 2;
+    transition: .4s ease-out;
+}
+
+header .nav-content{
+    display: flex;
+    height: 100%;
+}
+
+header .primary-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+header .container, .nav-content{
+    width: 100%;
+}
+
+header .secondary-navigation{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+header .secondary-navigation i{
+    margin: 0 15px;
+}
+
+header .logo{
+    /* font-family: 'Netflix Font', sans-serif;
+    font-weight: 580;
+    font-size: 35px; */
+    height: 80px;
+    width: 110px;
+    display: inline-block;
+}
+
+header nav{
+    margin-left: 25px;
+    display: inline-block;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #E5E5E5;
+    margin-right: 20px;
+}
+
+.active{
+    font-weight: 700;
+    color: #fff;
+}
+
+.active:hover{
+    color: currentColor;
+}
+
+header nav a:hover{
+    color: #b3b3b3;
+    transition: 0.3s;
+}
+
+/*Filme Principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%) ,url(../img/aldo.webp);
+    height: 640px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 4%;
+    width: 100%;
+    position: relative;
+    border-bottom: rgba(0,0,0,.50);
+}
+
+
+.titulo,
+.descricao,
+.botoes{
+    width: 100%;
+}
+
+.filme-principal .content{
+    width: 50%;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.4vw;
+}
+
+.titulo{
+    margin-bottom: 15px;
+}
+
+.botoes button{
+    border: none;
+    padding: 10px 30px;
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botoes button span{
+    vertical-align: top;
+    line-height: 25px;
+    display: inline-block;
+}
+
+
+.fa-solid{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.botao-assistir:hover{
+    background: rgba(255,255,255,0.75);
+    transition: .3s;
+}
+
+.botao-info{
+    background: rgba(166, 166, 166, 0.40);
+    color: #fff;
+}
+
+.botao-info:hover{
+    background: rgba(109,109,110,0.4);
+    transition: .3s;
+}
+
+/*
+SLIDER
+*/
+.movie-slider{
+    width: 100%;
+    position: relative;
+    top: -90px;
+    background: transparent;
+}
+
+.movie-slider .slider-content{
+    padding: 0 4%;
+}
+
+.movie-slider .slider-content .slider-title h3{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+
+/*Imagens*/
+.box-filmes{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+}
